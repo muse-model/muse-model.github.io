@@ -63,13 +63,7 @@
     <div class="abstract">
       <div class="inside">
         <p class="text">
-        We present <i>Muse</i>, 
-        a text-to-image Transformer model that achieves state-of-the-art image generation performance while being significantly more efficient than diffusion or autoregressive models.
-        Muse is trained on a masked modeling task in discrete token space: given the text embedding extracted from a pre-trained large language model (LLM), Muse is trained to predict randomly masked image tokens.
-        Compared to pixel-space diffusion models, such as Imagen and DALL-E 2, Muse is significantly more efficient due to the use of discrete tokens; 
-        compared to autoregressive models, such as Parti, Muse is more efficient due to the use of parallel decoding.
-        The use of a pre-trained LLM enables fine-grained language understanding, translating to high-fidelity image generation and the understanding of visual concepts such as objects, their spatial relationships, pose, cardinality etc.
-        Our 900 million parameter model achieves a new SOTA on CC3M, with an FID score of 6.06. The 3 billion parameter Muse-3B model achieves an FID of 7.88 on zero-shot COCO evaluation, along with a CLIP score of 0.32. We present a number of image editing applications which are enabled directly by our model with no fine-tuning: inpainting, outpainting, and mask-free editing.
+        We present <i>Muse</i>, a text-to-image Transformer model that achieves state-of-the-art image generation performance while being significantly more efficient than diffusion or autoregressive models. Muse is trained on a masked modeling task in discrete token space:  given the text embedding extracted from a pre-trained large language model (LLM), Muse is trained to predict randomly masked image tokens.  Compared to pixel-space diffusion models, such as Imagen and DALL-E 2, Muse is significantly more efficient due to the use of discrete tokens and requiring fewer sampling iterations; compared to autoregressive models, such as Parti, Muse is more efficient due to the use of parallel decoding. The use of a pre-trained LLM enables fine-grained language understanding, translating to high-fidelity image generation and the understanding of visual concepts such as objects, their spatial relationships, pose, cardinality, etc. Our 900M parameter model achieves a new SOTA on CC3M, with an FID score of 6.06.  The Muse 3B parameter model achieves an FID of 7.88 on zero-shot COCO evaluation, along with a CLIP score of 0.32. Muse also directly enables a number of image editing applications without the need to fine-tune or invert the model:  inpainting, outpainting, and mask-free editing.
         </p>
         <a class="read-paper" href="paper.pdf"><button>Research Paper</button></a>
       </div>
@@ -330,7 +324,7 @@
         <table class="pretty" style="align-self: center;">
           <caption><i>Muse</i> improves inference time over other models.<br>
             <font size=0.5em>
-            <sup>*</sup>Stable Diffusion times represent the best reported inference times and were not measured internally.
+            <sup>*</sup>Stable Diffusion times represent the best reported inference times and were not measured internally. The configuration used to achieve FID of 12.63 uses 5x more diffusion steps than what was used for benchmarking, roughly equivalent to 18.5s sampling time. 
             </font>
           </caption>
           <tr style="border-bottom: 3px solid rgb(26, 26, 26);">
@@ -390,7 +384,7 @@
           <!-- </tr> -->
           <tr>
             <td class="model">Stable Diffusion 1.4</td>
-            <td class="fid">10.39</td>
+            <td class="fid">12.63</td>
             <td class="fid">-</td>
           </tr>
           <tr>
