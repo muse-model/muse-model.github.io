@@ -10,6 +10,43 @@ a {
   text-decoration: none;
 }
 
+
+div.edit_grid {
+  text-align: center;
+  border-style: solid;
+  border-radius: 15px;
+  border-width: 3px;
+  padding: 2px;
+  font-size: 1.25em;
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: grid;
+  grid:
+    ". ." 1fr
+    "caption caption" auto 
+    / 1fr 1fr;
+  gap: 8px;
+}
+
+div.edit_grid img {
+  width: 100%;
+  max-width: 512px;
+  margin-bottom: -15px;
+}
+
+
+.caption {
+  grid-area: caption; 
+  align-items: start;
+  font-style: italic;
+  font-weight: normal;
+}
+
 div.white {
   background-color: rgb(255, 255, 255);
   color: rgb(26, 26, 26);
@@ -405,7 +442,7 @@ a.read-paper button:hover {
   div.header_light_gray {
     color: rgb(26, 26, 26);
     padding: 25px 10px;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(180, 180, 180);
   }
 
   div.header_light_gray h1 {
@@ -831,8 +868,9 @@ a.read-paper button:hover {
 
   div.header_light_gray {
     color: rgb(26, 26, 26);
-    padding: 50px;
-    background-color: rgb(245, 245, 245);
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgb(220, 220, 220);
   }
 
   div.header_light_gray h1 {

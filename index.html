@@ -199,6 +199,31 @@
       <p align=center>Our model gives us zero-shot, mask-free editing for free by iterative resampling image tokens conditioned on a text prompt.
     </div>
 
+    <div class="image_8" style="padding-top: 50px; background-color: rgb(245,245,245); margin: auto">
+
+<!--       <div style="margin: auto"> -->
+<!--         <figure> -->
+<!--           <img src="images/mfe/18_seed_0_orig_sr.jpg" style="width: 45%; max-width: 256px"> -->
+<!--           <img src="images/mfe/18_seed_0_synth_sr.jpg" style="width: 45%; max-width: 256px"> -->
+<!--           <figcaption style="overflow-wrap: break-word">Editing an image with "A croissant next to a latte with a flower latte art."</figcaption> -->
+<!--         </figure> -->
+<!--       </div> -->
+<!--       <div style="margin: auto"> -->
+<!--         <figure> -->
+<!--           <img src="images/mfe/68_seed_1_orig_sr.jpg" style="width: 45%; max-width: 256px"> -->
+<!--           <img src="images/mfe/68_seed_1_synth_sr.jpg" style="width: 45%; max-width: 256px"> -->
+<!--           <figcaption >Editing an image with "A bottle of Pinot Grigio next to a glass of white wine and a cork."</figcaption> -->
+<!--         </figure> -->
+<!--       </div> -->
+      <!-- <div class="image" style="align: left"> -->
+      <!--   <center> -->
+      <!--   <figure> -->
+      <!--     <img src="images/mfe/18_seed_0_synth_sr.jpg" style="width: 100%; max-width: 384px"> -->
+      <!--     <figcaption style="font-size: 1.5em">A croissant next to a latte with a flower latte art.</figcaption> -->
+      <!--   </figure> -->
+      <!--   </center> -->
+      <!-- </div> -->
+    </div>
     <div class="compositional">
       <br>
       <div class="text" id="compositional_madeof">
@@ -220,12 +245,40 @@
       <div class="image">
         <img src="./images/edit_opt/orig.gif" id="compositional_madeof_img">
       </div>
-      <!-- <div class="image"> -->
-      <!--   <figure> -->
-      <!--     <img src="./images/edit_opt/orig.gif" id=cat_tie_gif> -->
-      <!--     <figcaption>A cat wearing a tie.</figcaption> -->
-      <!--   </figure> -->
-      <!-- </div> -->
+    </div>
+    <div class="header_light_gray">
+      <h2>Mask-free editing controls multiple objects in an image using only a text prompt.
+      </h2>
+    </div>
+    <div class="edit_grid">
+      <div class="caption">A croissant next to a latte with a flower latte art.</div>
+      <div>
+        <figure>
+          <figcaption>Original</figcaption>
+          <img src="images/mfe/18_seed_0_orig_sr.jpg" >
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <figcaption>Edited</figcaption>
+          <img src="images/mfe/18_seed_0_synth_sr.jpg" >
+        </figure>
+      </div>
+    </div>
+    <div class="edit_grid">
+      <div class="caption">A bottle of Pinot Grigio next to a glass of white wine and a cork.</div>
+      <div>
+        <figure>
+          <figcaption>Original</figcaption>
+          <img src="images/mfe/68_seed_1_orig_sr.jpg" >
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <figcaption>Edited</figcaption>
+          <img src="images/mfe/68_seed_1_synth_sr.jpg" >
+        </figure>
+      </div>
     </div>
     <!-- <script> -->
     <!--   $("#cat_tie_gif").click(function () { -->
