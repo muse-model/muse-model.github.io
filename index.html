@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha256-YvdLHPgkqJ8DVUxjjnGVlMMJtNimJ6dYkowFFvp4kKs=" crossorigin="anonymous">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@GoogleAI" />
     <meta name="twitter:title" content="Muse: Text-To-Image Generation via Masked Generative Transformers" />
     <meta name="twitter:description" content="Muse: Text-To-Image Generation via Masked Generative Transformers" />
-    <meta name="twitter:image" content="https://muse-model.github.io/images/logo/muse_cake_1.jpg" />
+    <meta name="twitter:image" content="https://muse-model.github.io/assets/images/logo/muse_cake_1.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
 
-    <script src="jquery.min.js"></script>
-    <script src="jquery.flip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jqueryflips@1.0.0/dist/jquery.flip.min.js" integrity="sha256-CAgJ3dV4c4eWFBbunpYeUQZiRlVuR4NsizhWMKgN2L4=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha256-cMPWkL3FzjuaFSfEYESYmjF25hCIL6mfRSPnW8OVvM4=" crossorigin="anonymous"></script>
 
     <title>Muse: Text-To-Image Generation via Masked Generative Transformers</title>
   </head>
@@ -33,27 +34,27 @@
   <body>
 
     <div id="gallery0" style="padding-top: 50px; padding-bottom: 50px; background-color: rgb(245,245,245);">
-      <center>
-      <div class="flipcard" id="fig0">
+      
+      <div class="text-center flipcard" id="fig0">
         <div class="front">
           <figure>
-            <img src="./images/logo/muse_cake_1.jpg" style="width: 95%; max-width: 512px;">
+            <img src="./assets/images/logo/muse_cake_1.jpg" style="width: 95%; max-width: 512px;">
             <figcaption>A birthday cake with the word "Muse" written on it.</figcaption>
           </figure>
         </div>
         <div class="back">
           <figure>
-            <img src="./images/logo/muse_fire.jpg"  style="width: 95%; max-width: 512px;">
+            <img src="./assets/images/logo/muse_fire.jpg"  style="width: 95%; max-width: 512px;">
             <figcaption>A fireplace where the flames spell "Muse".</figcaption>
           </figure>
         </div>
       </div>
-      </center>
+      
       <h2 style="text-align: center;"><i>Muse:</i> Text-To-Image Generation via Masked Generative Transformers</h2>
-    <div class="authors">
+    <div class="text-center authors">
       <p>Huiwen Chang<sup>*</sup>, Han Zhang<sup>*</sup>, Jarred Barber<sup>&dagger;</sup>, AJ Maschinot<sup>&dagger;</sup>, José Lezama, Lu Jiang,<br>  Ming-Hsuan Yang, Kevin Murphy,  William T. Freeman,  Michael Rubinstein<sup>&dagger;</sup>, Yuanzhen Li<sup>&dagger;</sup>, Dilip Krishnan<sup>&dagger;</sup> </p>
       <p class="smaller"><sup>*</sup>Equal contribution. <sup>&dagger;</sup>Core contribution.</p>
-      <center><img src="https://research.google/static/images/google_research_lockup-121987c06c0aa0ab26ca8716a0f2e7945d1cbf82077bbab9f914dac0a0bf099f.svg" alt="Google Research" height=25></center>
+      <img src="https://research.google/static/images/google_research_lockup-121987c06c0aa0ab26ca8716a0f2e7945d1cbf82077bbab9f914dac0a0bf099f.svg" alt="Google Research" height=25>
     </div>
   </div>
     <div class="header_dark_gray">
@@ -71,13 +72,13 @@
     <!-- Block 1: System description -->
     <div class="header_dark_gray">
       <h1>Text-to-image Generation</h1>
-      <p align=center>Our model generates high-quality images from text prompts <i>fast</i> (1.3s for 512x512 resolution or 0.5s for 256x256 resolution on TPUv4).</p>
+      <p class="text-center">Our model generates high-quality images from text prompts <i>fast</i> (1.3s for 512x512 resolution or 0.5s for 256x256 resolution on TPUv4).</p>
     </div>
     <div class="image_8" id="gallery1">
       <div class="flipcard" id="fig0">
         <div class="front">
           <figure>
-            <img src="./images/gallery/An abstract, flowery painting_.jpg">
+            <img src="./assets/images/gallery/An abstract, flowery painting_.jpg">
             <figcaption>An abstract, flowery painting</figcaption>
           </figure>
         </div>
@@ -91,7 +92,7 @@
       <div class="flipcard nomobile" id="fig1">
         <div class="front">
           <figure>
-            <img src="./images/gallery/A shallow focus photography of a lamb in a wine glass._1_sr.jpg">
+            <img src="./assets/images/gallery/A shallow focus photography of a lamb in a wine glass._1_sr.jpg">
             <figcaption>A shallow focus photography of a lamb in a wine glass.</figcaption>
           </figure>
         </div>
@@ -105,13 +106,13 @@
       <div class="flipcard nomobile" id="fig2">
         <div class="front">
           <figure>
-            <img src="./images/gallery/A cake made of macarons in a heart shape_1_sr.jpg">
+            <img src="./assets/images/gallery/A cake made of macarons in a heart shape_1_sr.jpg">
             <figcaption>A cake made of macarons in a heart shape.</figcaption>
           </figure>
         </div>
         <div class="back">
           <figure>
-            <img src="./images/gallery/A cake made of macarons in a heart shape_1_sr.jpg">
+            <img src="./assets/images/gallery/A cake made of macarons in a heart shape_1_sr.jpg">
             <figcaption>A cake made of macarons in a heart shape.</figcaption>
           </figure>
         </div>
@@ -119,13 +120,13 @@
       <div class="flipcard nomobile" id="fig3">
         <div class="front">
           <figure>
-            <img src="./images/gallery/A tilt shift macro shot of a tiny Christmas town_sr.jpg">
+            <img src="./assets/images/gallery/A tilt shift macro shot of a tiny Christmas town_sr.jpg">
             <figcaption>A tilt shift macro shot of a tiny Christmas town</figcaption>
           </figure>
         </div>
         <div class="back">
           <figure>
-            <img src="./images/gallery/A cake made of macarons in a heart shape_1_sr.jpg">
+            <img src="./assets/images/gallery/A cake made of macarons in a heart shape_1_sr.jpg">
             <figcaption>A cake made of macarons in a heart shape.</figcaption>
           </figure>
         </div>
@@ -133,13 +134,13 @@
       <div class="flipcard nomobile" id="fig4">
         <div class="front">
           <figure>
-            <img src="./images/gallery/An abstract, flowery painting_.jpg">
+            <img src="./assets/images/gallery/An abstract, flowery painting_.jpg">
             <figcaption>An abstract, flowery painting</figcaption>
           </figure>
         </div>
         <div class="back">
           <figure>
-            <img src="./images/gallery/An abstract, flowery painting_.jpg">
+            <img src="./assets/images/gallery/An abstract, flowery painting_.jpg">
             <figcaption>.</figcaption>
           </figure>
         </div>
@@ -147,7 +148,7 @@
       <div class="flipcard nomobile" id="fig5">
         <div class="front">
           <figure>
-            <img src="./images/gallery/An abstract, flowery painting_.jpg">
+            <img src="./assets/images/gallery/An abstract, flowery painting_.jpg">
             <figcaption>A shallow focus photography of a lamb in a wine glass.</figcaption>
           </figure>
         </div>
@@ -161,7 +162,7 @@
       <div class="flipcard nomobile" id="fig6">
         <div class="front">
           <figure>
-            <img src="./images/gallery/An abstract, flowery painting_.jpg">
+            <img src="./assets/images/gallery/An abstract, flowery painting_.jpg">
             <figcaption>.</figcaption>
           </figure>
         </div>
@@ -175,7 +176,7 @@
       <div class="flipcard nomobile" id="fig7">
         <div class="front">
           <figure>
-            <img src="./images/gallery/An abstract, flowery painting_.jpg">
+            <img src="./assets/images/gallery/An abstract, flowery painting_.jpg">
             <figcaption>A tilt shift macro shot of a tiny Christmas town</figcaption>
           </figure>
         </div>
@@ -190,7 +191,7 @@
 
     <div class="header_dark_gray">
       <h1>Zero-shot, Mask-free editing</h1>
-      <p align=center>Our model gives us zero-shot, mask-free editing for free by iteratively resampling image tokens conditioned on a text prompt.
+      <p class="text-center">Our model gives us zero-shot, mask-free editing for free by iteratively resampling image tokens conditioned on a text prompt.
     </div>
 
     <div class="compositional">
@@ -211,7 +212,7 @@
       </div>
       <br>
       <div class="image">
-        <img src="./images/edit_opt/orig.gif" id="compositional_madeof_img">
+        <img src="./assets/images/edit_opt/orig.gif" id="compositional_madeof_img">
       </div>
     </div>
     <div class="header_light_gray">
@@ -223,13 +224,13 @@
       <div>
         <figure>
           <figcaption>Original</figcaption>
-          <img src="images/mfe/18_seed_0_orig_sr.jpg" >
+          <img src="./assets/images/mfe/18_seed_0_orig_sr.jpg" >
         </figure>
       </div>
       <div>
         <figure>
           <figcaption>Edited</figcaption>
-          <img src="images/mfe/18_seed_0_synth_sr.jpg" >
+          <img src="./assets/images/mfe/18_seed_0_synth_sr.jpg" >
         </figure>
       </div>
     </div>
@@ -238,20 +239,20 @@
       <div>
         <figure>
           <figcaption>Original</figcaption>
-          <img src="images/mfe/68_seed_1_orig_sr.jpg" >
+          <img src="./assets/images/mfe/68_seed_1_orig_sr.jpg" >
         </figure>
       </div>
       <div>
         <figure>
           <figcaption>Edited</figcaption>
-          <img src="images/mfe/68_seed_1_synth_sr.jpg" >
+          <img src="./assets/images/mfe/68_seed_1_synth_sr.jpg" >
         </figure>
       </div>
     </div>
 
     <div class="header_dark_gray">
       <h1>Zero-shot Inpainting/Outpainting</h1>
-      <p align=center>Our model gives us mask-based editing (inpainting/outpainting) for free: mask-based editing is equivalent to generation.</p>
+      <p class="text-center">Our model gives us mask-based editing (inpainting/outpainting) for free: mask-based editing is equivalent to generation.</p>
     </div>
 
     <div class="compositional">
@@ -265,7 +266,7 @@
       </div>
       <br>
       <div class="image">
-        <img src="./images/inpaint/boston_masked.jpg" id="compositional_animals_img">
+        <img src="./assets/images/inpaint/boston_masked.jpg" id="compositional_animals_img">
       </div>
     </div>
     <div class="edit_grid">
@@ -273,13 +274,13 @@
       <div>
         <figure>
           <figcaption>Original (+mask)</figcaption>
-          <img src="images/inpaint/greta_orig.jpg">
+          <img src="./assets/images/inpaint/greta_orig.jpg">
         </figure>
       </div>
       <div>
         <figure>
           <figcaption>Edited</figcaption>
-          <img src="images/inpaint/greta_balloons.jpg">
+          <img src="./assets/images/inpaint/greta_balloons.jpg">
         </figure>
       </div>
     </div>
@@ -288,13 +289,13 @@
       <div>
         <figure>
           <figcaption>Original (+mask)</figcaption>
-          <img src="images/inpaint/gazebo_masked.jpg">
+          <img src="./assets/images/inpaint/gazebo_masked.jpg">
         </figure>
       </div>
       <div>
         <figure>
           <figcaption>Edited</figcaption>
-          <img src="images/inpaint/gazebo_synth.jpg">
+          <img src="./assets/images/inpaint/gazebo_synth.jpg">
         </figure>
       </div>
     </div>
@@ -303,7 +304,7 @@
     </div>
     <div class="white">
       <figure>
-        <img src="./images/pipeline_v4.jpg">
+        <img src="./assets/images/pipeline_v4.jpg">
         <figcaption><p><i>Muse</i> training pipeline. We feed low resolution and high resolution images into two independent VQGAN tokenizer networks. These tokens are then masked, and low resolution ("base") and high resolution ("superres") transformers are trained to predict masked tokens, conditioned on unmasked tokens and T5 text embeddings.</p></figcaption>
       </figure>
     </div>
@@ -320,9 +321,9 @@
       <div class="right" style="display: flex;">
         <table class="pretty" style="align-self: center;">
           <caption><i>Muse</i> improves inference time over other models.<br>
-            <font size=0.5em>
-            <sup>*</sup>Stable Diffusion times represent the best reported inference times and were not measured internally. The configuration used to achieve FID of 12.63 uses 5x more diffusion steps than what was used for benchmarking, roughly equivalent to 18.5s sampling time. 
-            </font>
+            <p style="font-size: 0.5em">
+              <sup>*</sup> Stable Diffusion times represent the best reported inference times and were not measured internally. The configuration used to achieve FID of 12.63 uses 5x more diffusion steps than what was used for benchmarking, roughly equivalent to 18.5s sampling time. 
+            </p>
           </caption>
           <tr style="border-bottom: 3px solid rgb(26, 26, 26);">
             <th class="fid">Model</th>
@@ -365,8 +366,7 @@
         </table>
       </div>
 
- 
-    </div>  
+    </div>
     <div class="content1">
       <div class="right" style="display: flex;">
         <table class="pretty" style="align-self: center;">
@@ -400,253 +400,12 @@
       </div>
     </div>
 
-
-
     <div class="content">
       <h1>Special Thanks</h1>
       <p class="smaller" style="text-align: justify;">We thank William Chan, Chitwan Saharia, and Mohammad Norouzi for providing us training datasets, various evaluation codes, website templates and generous suggestions. Jay Yagnik, Rahul Sukthankar, Tom Duerig and David Salesin provided enthusiastic support of this project for which we are grateful. We thank Victor Gomes and Erica Moreira for infrastructure support, Jing Yu Koh and Jason Baldridge for dataset, model and evaluation discussions and feedback on the paper, Mike Krainin for model speedup discussions, JD Velasquez for discussions and insights, Sarah Laszlo, Kathy Meier-Hellstern, and Rachel Stigler for assisting us with the publication process, Andrew Bunner, Jordi Pont-Tuset, and Shai Noy for help on internal demos, David Fleet, Saurabh Saxena, Jiahui Yu, and Jason Baldridge for sharing Imagen and Parti speed metrics.</p>
     </div>
 
+    <script src="./assets/scripts/index.js"></script>
 
-    <script type="text/javascript">
-      logo_images = [
-        {"src": "./images/logo/muse_cake_1.jpg",
-          "caption": "A birthday cake with \"Muse\" written on it."},
-        {"src": "./images/logo/muse_fire.jpg",
-          "caption": "A fireplace where the word \"Muse\" is spelled in the flames."},
-        {"src": "./images/logo/muse_fountain_pen.jpg",
-          "caption": "The word \"Muse\" drawn fluently on paper with a fountain pen."},
-        {"src": "./images/logo/muse_cupcakes.jpg",
-          "caption": "a large array of colorful cupcakes, arranged on a maple table to spell \"Muse\""},
-        //{"src": "./images/logo/muse_aurora.jpg",
-        //"caption": "The word \"Muse\" written in the night sky, reflected on a lake. The Aurora Borealis is in the background."},
-        //{"src": "./images/logo/muse_stars.jpg",
-        //"caption": "A constellation in the night sky that spells out the word \"Muse\"."},
-        {"src": "./images/logo/muse_latte.jpg",
-          "caption": "A latte with \"Muse\" written in latte art"},
-        {"src": "./images/logo/muse_corgi.jpg",
-          "caption": "A Welsh corgi holding a sign in its mouth that says \"Muse\"."},
-        {"src": "./images/logo/muse_fish.jpg",
-          "caption": "A school of fish swirling around in the ocean to spell the letters \"Muse\"."},
-        {"src": "./images/logo/muse_van_gogh.jpg",
-          "caption": "The word \"Muse\" painted on canvas by Vincent van Gogh."}
-      ];
-
-      gallery_images = [{"src": "./images/gallery/A real flamingo reading a large open book. a big stack of books is piled up next to it. dslr photograph._1_sr.jpg", "caption": "A real flamingo reading a large open book. a big stack of books is piled up next to it. dslr photograph."}, {"src": "./images/gallery/A rabbit playing the violin.jpg", "caption": "A rabbit playing the violin"}, {"src": "./images/gallery/Three  elephants  standing  ontop of each other._sr.jpg", "caption": "Three  elephants  standing  ontop of each other."}, {"src": "./images/gallery/A striking photo of a lighthouse at sunset..jpg", "caption": "A striking photo of a lighthouse at sunset."}, {"src": "./images/gallery/A cat and a dog. Canon camera. 10mm lens_5_sr.jpg", "caption": "A cat and a dog. Canon camera. 10mm lens"}, {"src": "./images/gallery/High-contrast  image  of  the word  \u201cWOMBAT\u201d   writtenwith thick colored graffiti letters on a white wall with dramatic splashes of paint_sr.jpg", "caption": "High-contrast  image  of  the word  \u201cWOMBAT\u201d   writtenwith thick colored graffiti letters on a white wall with dramatic splashes of paint"}, {"src": "./images/gallery/A bear riding a bicycle, with a bird perched on the handlebars._1_sr.jpg", "caption": "A bear riding a bicycle, with a bird perched on the handlebars."}, {"src": "./images/gallery/A surrealist painting of a robot making coffee..jpg", "caption": "A surrealist painting of a robot making coffee."}, {"src": "./images/gallery/A cake made of macarons in a heart shape_1_sr.jpg", "caption": "A cake made of macarons in a heart shape"}, {"src": "./images/gallery/An abstract, flowery painting_.jpg", "caption": "An abstract, flowery painting"}, {"src": "./images/gallery/A painting of a canal in Venice.jpg", "caption": "A painting of a canal in Venice"}, {"src": "./images/gallery/The New York skyline, with the great pyramid in the foreground and Mount Everest in the background._sr.jpg", "caption": "The New York skyline, with the great pyramid in the foreground and Mount Everest in the background."}, {"src": "./images/gallery/A shallow focus photography of a lamb in a wine glass._1_sr.jpg", "caption": "A shallow focus photography of a lamb in a wine glass."}, {"src": "./images/gallery/An art gallery displaying Monet paintings. The art gallery is flooded. Robots are going around the art gallery using paddle boards.jpg", "caption": "An art gallery displaying Monet paintings. The art gallery is flooded. Robots are going around the art gallery using paddle boards"}, {"src": "./images/gallery/A close up, sharp photo of a pink flower..jpg", "caption": "A close up, sharp photo of a pink flower."}, {"src": "./images/gallery/A photo of a panda doing yoga on a yoga mat..jpg", "caption": "A photo of a panda doing yoga on a yoga mat."}, {"src": "./images/gallery/A cat playing a game of chess against itself. Hyper sharp. Award winning. Canon camera. 10mm lens_9_sr.jpg", "caption": "A cat playing a game of chess against itself. Hyper sharp. Award winning. Canon camera. 10mm lens"}, {"src": "./images/gallery/A cake made of macarons in a unicorn shape_1_sr.jpg", "caption": "A cake made of macarons in a unicorn shape"}, {"src": "./images/gallery/Portrait of a well-dressed raccoon, oil painting in the styleof Rembrandt_sr.jpg", "caption": "Portrait of a well-dressed raccoon, oil painting in the styleof Rembrandt"}, {"src": "./images/gallery/Two cats doing research_7_sr.jpg", "caption": "Two cats doing research"}, {"src": "./images/gallery/A large present with a red rib-bon to the left of a Christmastree._sr.jpg", "caption": "A large present with a red rib-bon to the left of a Christmastree."}, {"src": "./images/gallery/An artistic black and white street photograph of a French cafe.jpg", "caption": "An artistic black and white street photograph of a French cafe"}, {"src": "./images/gallery/Manhattan skyline made out of bread..jpg", "caption": "Manhattan skyline made out of bread."}, {"src": "./images/gallery/A tilt shift macro shot of a tiny Christmas town_sr.jpg", "caption": "A tilt shift macro shot of a tiny Christmas town"}, {"src": "./images/gallery/A  photograph  of  the  inside of  a  subway  train. There are  raccoons  sitting  on  the seats.   One  of  them  is  reading a newspaper. The window shows  the  city  in  the  background._sr.jpg", "caption": "A  photograph  of  the  inside of  a  subway  train. There are  raccoons  sitting  on  the seats.   One  of  them  is  reading a newspaper. The window shows  the  city  in  the  background."}, {"src": "./images/gallery/Two cups of coffee, one with latte  art  of  yin  yang  symbol. The  other  has  latter art of a heart._.jpg", "caption": "Two cups of coffee, one with latte  art  of  yin  yang  symbol. The  other  has  latter art of a heart."}, {"src": "./images/gallery/Rainbow coloured penguin_2_sr.jpg", "caption": "Rainbow coloured penguin"}, {"src": "./images/gallery/A cake made of macarons in a pineapple shape_1_sr.jpg", "caption": "A cake made of macarons in a pineapple shape"}, {"src": "./images/gallery/A high contrast portrait photo of a fluffy hamster wearing an orange beanie and sunglasses holding a sign that says _Let's PAINT!__2_sr.jpg", "caption": "A high contrast portrait photo of a fluffy hamster wearing an orange beanie and sunglasses holding a sign that says "}, {"src": "./images/gallery/A futuristic city with flying cars._1_sr.jpg", "caption": "A futuristic city with flying cars."}, {"src": "./images/gallery/Two  baseballs  to  the  left  of three tennis balls._sr.jpg", "caption": "Two  baseballs  to  the  left  of three tennis balls."}, {"src": "./images/gallery/A ballet dancer made from rope..jpg", "caption": "A ballet dancer made from rope."}, {"src": "./images/gallery/A fluffy baby sloth with a knitted hat trying to figure out a laptop, cluse up..jpg", "caption": "A fluffy baby sloth with a knitted hat trying to figure out a laptop, cluse up."}, {"src": "./images/gallery/The saying 'BE EXCELLENT TO EACH OTHER' written in a stained glass window._sr.jpg", "caption": "The saying 'BE EXCELLENT TO EACH OTHER' written in a stained glass window."}, {"src": "./images/gallery/A  portrait  of  a  man  wearing sunglasses and a business suit, painting in pop art style._sr.jpg", "caption": "A  portrait  of  a  man  wearing sunglasses and a business suit, painting in pop art style."}];
-
-      lastCardFlippedIdx = {
-        gallery0: -1,
-        gallery1: -1,
-      };
-
-      lastCardFlippedLastSwapTime = {
-        gallery0: -1,
-        gallery1: -1,
-      };
-
-      $(".flipcard").flip({
-        trigger: "manual",
-        reverse: false,
-      });
-
-      function checkIfImageIsVisible(name, image) {
-        numCards = $(name + " .flipcard:visible").size();
-
-        for (var cardIdx = 0; cardIdx < numCards; ++cardIdx) {
-          var isFlipped = $(name + " #fig" + cardIdx).data("flip-model").isFlipped;
-          if (!isFlipped) {
-            src = $(name + " #fig" + cardIdx + " div.front figure img").attr("src")
-          } else {
-            src = $(name + " #fig" + cardIdx + " div.back figure img").attr("src")
-          }
-
-          if (image.src == src) {
-            return true;
-          }
-        }
-        return false;
-      }
-
-      function getNextImage(name) {
-        // different galleries have different sources of imagery.
-        if (name == "#gallery0") {
-            img_src = logo_images;
-        } else {
-            img_src = gallery_images;
-        }
-        while (true) {
-          randomImageIdx = Math.floor(Math.random() * img_src.length);
-          if (!checkIfImageIsVisible(name, img_src[randomImageIdx])) {
-            return img_src[randomImageIdx];
-          }
-        }
-      }
-
-      function randomSwapImageWithId(name, randomCardIdx) {
-        numCards = $(name + " .flipcard:visible").size();
-
-        image = getNextImage(name);
-
-        const d = new Date();
-        let currentTime = d.getTime();
-        lastCardFlippedIdx[name] = randomCardIdx;
-        lastCardFlippedLastSwapTime[name] = currentTime;
-
-        var isFlipped = $(name + " #fig" + randomCardIdx).data("flip-model").isFlipped;
-        if (!isFlipped) {
-          $(name + " #fig" + randomCardIdx + " div.back figure img").attr("src", image.src)
-          $(name + " #fig" + randomCardIdx + " div.back figure figcaption").text(image.caption)
-        } else {
-          $(name + " #fig" + randomCardIdx + " div.front figure img").attr("src", image.src)
-          $(name + " #fig" + randomCardIdx + " div.front figure figcaption").text(image.caption)
-        }
-
-        $(name + " #fig" + randomCardIdx).flip("toggle");
-      }
-
-      function randomSwapImage(name) {
-        numCards = $(name + " .flipcard:visible").size();
-
-        const d = new Date();
-        if (d.getTime() - lastCardFlippedIdx[name] < 5000) {
-          setTimeout(randomSwapImage, 1000, name);
-          return;
-        }
-
-        do {
-          randomCardIdx = Math.floor(Math.random() * numCards);
-          if (numCards == 1) {
-            break;
-          }
-        } while (randomCardIdx == lastCardFlippedIdx[name]);
-
-        randomSwapImageWithId(name, randomCardIdx);
-        setTimeout(randomSwapImage, 3000, name);
-      }
-      setTimeout(randomSwapImage, 6000, "#gallery0");
-
-      function setupGallery1(id) {
-            randomSwapImageWithId("#gallery1", id);
-            $("#gallery1 #fig" + id).click(
-              function() {
-                randomSwapImageWithId("#gallery1", id);
-              }
-            );
-      }
-      for (id = 0; id < 8; id ++) {
-            setupGallery1(id);
-      }
-      $("#gallery0 #fig0").click(
-        function() {
-          randomSwapImageWithId("#gallery0", 0);
-        }
-      );
-
-      setTimeout(randomSwapImage, 1000, "#gallery1");
-    </script>
-
-   
-    <script type="text/javascript">
-      compositionalAnimalsManualClicked = false;
-      compositionalMadeOfManualClicked = false;
-
-      comp_files = {
-        "Original (with mask)": "./images/inpaint/boston_masked.jpg",
-        "\"New York in the background\"": "./images/inpaint/boston_nyc.jpg",
-        "\"Paris in the background\"": "./images/inpaint/boston_paris.jpg",
-        "\"San Francisco in the background\"": "./images/inpaint/boston_sf.jpg"
-      }
-
-      function updateComposition(name) {
-        var compositionSpans = $(name + " p span.selected").map(function() {
-          return $(this).text();
-        }).get();
-        var compositionText = "";
-        for (var compositionSpansIdx = 0; compositionSpansIdx < compositionSpans.length; ++compositionSpansIdx) {
-          if (compositionSpansIdx > 0) {
-            compositionText += " ";
-          }
-          compositionText += compositionSpans[compositionSpansIdx];
-        }
-        if (name == "#compositional_madeof") {
-          if (compositionText == "Original") {
-            $(name + "_img").attr("src", "./images/edit_opt/orig.gif")
-          } else {
-            // Generate a random index that is not the one already selected
-            randImgIdx = "/"; // something guaranteed to be in the path
-            cur_src = $(name + "_img").attr("src");
-            while (cur_src.search(randImgIdx) != -1) {
-              randImgIdx = Math.floor(Math.random() * 4);
-            }
-            first_space = compositionText.search(" ");
-            file = compositionText.slice(first_space + 1, -2).replaceAll(" ", "-");
-            $(name + "_img").attr("src", "./images/edit_opt/" + file + "_" + randImgIdx + ".gif")
-          }
-        } else if (name == "#compositional_animals") {
-          randImgIdx = Math.floor(Math.random() * 4);
-          $(name + "_img").attr("src", comp_files[compositionText]);
-        }
-      }
-
-      function randomComposition(name) {
-        if (name == "#compositional_animals" && compositionalAnimalsManualClicked == true) {
-          compositionalAnimalsManualClicked = false;
-          setTimeout(randomComposition, 4000, name);
-          return;
-        } else if (name == "#compositional_madeof" &&
-                   compositionalMadeOfManualClicked == true) {
-          compositionalMadeOfManualClicked = false;
-          setTimeout(randomComposition, 4000, name);
-          return;
-        }
-
-        var compositionPs = $(name + " p.selectable").toArray();
-        var compositionOptions = [];
-        for (var i = 0; i < compositionPs.length; ++i) {
-          var compositionSpanSelected = $(compositionPs[i]).children("span.selected");
-          var compositionSpans = $(compositionPs[i]).children("span").not("span.selected").toArray();
-          for (var j = 0; j < compositionSpans.length; ++j) {
-            compositionOption = {
-              "p": compositionPs[i],
-              "span_selected": compositionSpanSelected,
-              "span_option": $(compositionSpans[j])
-            };
-            compositionOptions.push(compositionOption);
-          }
-        }
-
-        randomCompositionOptionIdx = Math.floor(Math.random() * compositionOptions.length);
-        randomCompositionOption = compositionOptions[randomCompositionOptionIdx];
-
-        randomCompositionOption.span_selected.toggleClass("selected");
-        randomCompositionOption.span_option.toggleClass("selected");
-
-        updateComposition(name);
-        setTimeout(randomComposition, 4000, name);
-      }
-
-      $("#compositional_animals p.selectable span").click(function() {
-        $(this).siblings().removeClass("selected");
-        $(this).addClass("selected");
-        updateComposition("#compositional_animals");
-        compositionalAnimalsManualClicked = true;
-      });
-      $("#compositional_madeof_img").click(function() {
-        updateComposition("#compositional_madeof");
-        compositionalAnimalsManualClicked = true;
-      });
-
-      $("#compositional_madeof p.selectable span").click(function() {
-        $(this).siblings().removeClass("selected");
-        $(this).addClass("selected");
-        updateComposition("#compositional_madeof");
-        compositionalMadeOfManualClicked = true;
-      });
-
-      <!-- setTimeout(randomComposition, 2000, "#compositional_animals"); -->
-      <!-- setTimeout(randomComposition, 4000, "#compositional_madeof"); -->
-    </script>
-
-    <script src="bootstrap.bundle.min.js"></script>
   </body>
 </html>
