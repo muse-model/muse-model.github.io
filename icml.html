@@ -6,7 +6,6 @@
 
     <link href="bootstrap.min.css" rel="stylesheet" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@GoogleAI" />
     <meta name="twitter:title" content="Muse: Text-To-Image Generation via Masked Generative Transformers" />
     <meta name="twitter:description" content="Muse: Text-To-Image Generation via Masked Generative Transformers" />
     <meta name="twitter:image" content="https://muse-model.github.io/images/logo/muse_cake_1.jpg" />
@@ -19,7 +18,7 @@
     <script src="jquery.min.js"></script>
     <script src="jquery.flip.min.js"></script>
 
-    <title>Muse: Text-To-Image Generation via Masked Generative Transformers</title>
+    <title>Muse: Text-To-Image Generation via Masked Generative Transformers (ICML submission)</title>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8HJZTYJKX"></script>
@@ -50,11 +49,6 @@
       </div>
       </center>
       <h2 style="text-align: center;"><i>Muse:</i> Text-To-Image Generation via Masked Generative Transformers</h2>
-    <div class="authors">
-      <p>Huiwen Chang<sup>*</sup>, Han Zhang<sup>*</sup>, Jarred Barber<sup>&dagger;</sup>, AJ Maschinot<sup>&dagger;</sup>, José Lezama, Lu Jiang,<br>  Ming-Hsuan Yang, Kevin Murphy,  William T. Freeman,  Michael Rubinstein<sup>&dagger;</sup>, Yuanzhen Li<sup>&dagger;</sup>, Dilip Krishnan<sup>&dagger;</sup> </p>
-      <p class="smaller"><sup>*</sup>Equal contribution. <sup>&dagger;</sup>Core contribution.</p>
-      <center><img src="https://research.google/static/images/google_research_lockup-121987c06c0aa0ab26ca8716a0f2e7945d1cbf82077bbab9f914dac0a0bf099f.svg" alt="Google Research" height=25></center>
-    </div>
   </div>
     <div class="header_dark_gray">
       <h1><i>Muse</i> is a fast, state-of-the-art text-to-image generation and editing model.</h1>
@@ -65,7 +59,7 @@
         <p class="text">
         We present <i>Muse</i>, a text-to-image Transformer model that achieves state-of-the-art image generation performance while being significantly more efficient than diffusion or autoregressive models. Muse is trained on a masked modeling task in discrete token space:  given the text embedding extracted from a pre-trained large language model (LLM), Muse is trained to predict randomly masked image tokens.  Compared to pixel-space diffusion models, such as Imagen and DALL-E 2, Muse is significantly more efficient due to the use of discrete tokens and requiring fewer sampling iterations; compared to autoregressive models, such as Parti, Muse is more efficient due to the use of parallel decoding. The use of a pre-trained LLM enables fine-grained language understanding, translating to high-fidelity image generation and the understanding of visual concepts such as objects, their spatial relationships, pose, cardinality, etc. Our 900M parameter model achieves a new SOTA on CC3M, with an FID score of 6.06.  The Muse 3B parameter model achieves an FID of 7.88 on zero-shot COCO evaluation, along with a CLIP score of 0.32. Muse also directly enables a number of image editing applications without the need to fine-tune or invert the model:  inpainting, outpainting, and mask-free editing.
         </p>
-        <a class="read-paper" href="https://arxiv.org/abs/2301.00704"><button>Research Paper</button></a>
+        <a class="read-paper" href="https://openreview.net/forum?id=hi9UssZdHR"><button>Research Paper</button></a>
       </div>
     </div>
     <!-- Block 1: System description -->
@@ -430,13 +424,6 @@
           </tr>
         </table>
       </div>
-    </div>
-
-
-
-    <div class="content">
-      <h1>Special Thanks</h1>
-      <p class="smaller" style="text-align: justify;">We thank William Chan, Chitwan Saharia, and Mohammad Norouzi for providing us training datasets, various evaluation codes, website templates and generous suggestions. Jay Yagnik, Rahul Sukthankar, Tom Duerig and David Salesin provided enthusiastic support of this project for which we are grateful. We thank Victor Gomes and Erica Moreira for infrastructure support, Jing Yu Koh and Jason Baldridge for dataset, model and evaluation discussions and feedback on the paper, Mike Krainin for model speedup discussions, JD Velasquez for discussions and insights, Sarah Laszlo, Kathy Meier-Hellstern, and Rachel Stigler for assisting us with the publication process, Andrew Bunner, Jordi Pont-Tuset, and Shai Noy for help on internal demos, David Fleet, Saurabh Saxena, Jiahui Yu, and Jason Baldridge for sharing Imagen and Parti speed metrics.</p>
     </div>
 
 
